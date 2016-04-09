@@ -129,7 +129,7 @@ file you have viewed?*
 * Use the `find` command to search for files more effectively. Search the 
 sub-directories under `challenge_files` to find the location of the file named
 `modi_laboriosam.txt`. *Where is that file located?*
-/home/cabox/workspace/challenge_files/tmp/modi_laboriosam.txt 
+*/tmp/modi_laboriosam.txt 
 
 * Use the `grep` command to search for text within a file. Use `grep` on all 
 the `.user` files in `challenge_files` to find which files contain "WA" 
@@ -139,9 +139,38 @@ the `.user` files in `challenge_files` to find which files contain "WA"
 * Use the `-r` option of `grep` to *recursively* find the text "Waldo" hidden 
 in a file somewhere under the `challenge_files` directory. *Paste the result 
 showing the file and line where the word "Waldo" shows up.*
+serial-numbers/eaque_molestiae.txt:Ut est maiores quia autem. Nisi modi Waldo sed cor
+poris sit explicabo ut est. Et est placeat ea sunt sunt consectetur sunt incidunt. Ex
+plicabo vel esse blanditiis dolorem culpa non quia.
 
 ### Pipes and Connecting Commands
 
-* Sometimes it's useful to output the results of a command to a text file for further analysis, reference, or processing. Try running `ls > files.txt`. Notice that the file `files.txt` was created. View that file using `more`. *What do you see in the `files.txt` file?*
-* Notice that if you run `ls -alh` in the `challenge_files` directory, the files scroll by very quickly. Sometimes it would be better to get the results in a paginated format. Try running `ls -alh | more`. *Describe what you see when you run `ls -alh | more`.*
-* Earlier, when you viewed the list of active processes on your devbox using `ps aux`, the list was probably really long. You can make this list more manageable by using the pipe (`|`) to filter the results of `ps` using `grep`. Run `ps aux | grep <your_username>` to see what processes are running for your specific user. *Paste the list of processes that reference your username here:*
+* Sometimes it's useful to output the results of a command to a text file for 
+further analysis, reference, or processing. Try running `ls > files.txt`. Notice 
+that the file `files.txt` was created. View that file using `more`. 
+*What do you see in the `files.txt` file?*
+It's a list of all of the files in the directory (challenge_files) where I created 
+the files.txt file.
+
+* Notice that if you run `ls -alh` in the `challenge_files` directory, the 
+files scroll by very quickly. Sometimes it would be better to get the results 
+in a paginated format. Try running `ls -alh | more`. 
+*Describe what you see when you run `ls -alh | more`.*
+It breaks up the results into several different pages to make reading through the list easier.
+
+* Earlier, when you viewed the list of active processes on your devbox 
+using `ps aux`, the list was probably really long. You can make this list 
+more manageable by using the pipe (`|`) to filter the results of `ps` using 
+`grep`. Run `ps aux | grep <your_username>` to see what processes are running 
+for your specific user. 
+*Paste the list of processes that reference your username here:*
+root       531  0.0  0.6  63876  3344 ?        Ss   12:50   0:00 sshd: cabox [priv]  
+cabox      533  0.0  0.2  64012  1484 ?        S    12:50   0:00 sshd: cabox@notty   
+cabox      534  0.0  0.1  12924   924 ?        Ss   12:50   0:00 /usr/lib/openssh/sft
+p-server                                                                             
+root       539  0.0  0.6  63876  3496 ?        Ss   12:51   0:00 sshd: cabox [priv]  
+cabox      541  0.0  0.2  64008  1492 ?        S    12:51   0:00 sshd: cabox@pts/0   
+cabox      542  0.0  0.8  20632  4568 pts/0    Ss   12:51   0:00 -bash               
+cabox      758  0.0  0.2  15520  1144 pts/0    R+   13:12   0:00 ps aux              
+cabox      759  0.0  0.1   8816   764 pts/0    S+   13:12   0:00 grep --color=auto ca
+box 
